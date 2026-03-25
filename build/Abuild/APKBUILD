@@ -2,7 +2,7 @@ pkgname=bash
 _basever=5.3
 _patchlevel=3
 pkgver="$_basever.$_patchlevel"
-pkgrel=${pkgrel:-0}
+pkgrel=4
 pkgdesc="The GNU Bourne Again shell"
 url="https://git.savannah.gnu.org/cgit/bash.git/"
 arch="all"
@@ -53,7 +53,6 @@ package() {
  	install -m644 "$srcdir"/dot.bash_logout "$pkgdir"/etc/skel/.bash_logout
 }
 
-options="$options ${DISABLE_CHECK:+!check}"
 sha512sums="
 426702c8b0fb9e0c9956259973ce5b657890fd47f4f807a64febf20077bb48d0b91474ed6e843d2ef277186b46c5fffa79b808da9b48d4ec027d5e2de1b28ed8  bash-5.3.tar.gz
 66d0987f1a8951974c3a707a1980ef391a1f2a2938f0fa46adb77fcdcef6a3ca49e67182b9640ece3e59bb289e5b4a17eb870aa2a525a03e829a7be158d020a6  bash53-001.patch
